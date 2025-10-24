@@ -104,7 +104,12 @@ This project is open-source and available under the MIT License.
 ```bash
 streamlit run app.py
 ```
-### ScreenShots
+### 📷 ScreenShots
+<img width="1900" height="815" alt="image" src="https://github.com/user-attachments/assets/e3c7a654-deed-4081-baae-4ee37554779c" />
+<img width="1905" height="846" alt="image" src="https://github.com/user-attachments/assets/7afb1e47-a47c-43b7-a1bf-b13a6480d1ef" />
+
+
 
 
 ### 🧮 Live Demo
+-👉 [Click here for Live Demo](https://trading-bot-8zu9gsvgmfwwxxvnxlwxdu.streamlit.app/)
