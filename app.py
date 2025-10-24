@@ -8,12 +8,20 @@ from src.limit_orders import place_limit_order
 # Load environment variables
 load_dotenv()
 
+
 api_key = os.getenv("BINANCE_API_KEY")
 api_secret = os.getenv("BINANCE_API_SECRET")
-simulate_flag = os.getenv("SIMULATE", "0") == "1"
+
+# Force simulation mode on Streamlit Cloud
+is_cloud = os.getenv("STREAMLIT_RUNTIME", "") != ""
+simulate_flag = True if is_cloud else (os.getenv("SIMULATE", "0") == "1")
 
 cfg = BotConfig(api_key, api_secret, testnet=True, simulate=simulate_flag)
-client = make_client(cfg)
+client = None if simulate_flag else make_client(cfg)
+
+if simulate_flag:
+    st.warning("⚠️ Running in simulation mode due to API region restrictions.")
+
 
 # App title
 st.title("💹 Binance Futures Trading Bot (Testnet)")
