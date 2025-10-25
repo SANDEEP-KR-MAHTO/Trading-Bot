@@ -45,7 +45,7 @@ binance-futures-bot/
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/binance-futures-bot.git
+git clone https://github.com/SANDEEP-KR-MAHTO/Trading-Bot
 cd binance-futures-bot
 ```
 
